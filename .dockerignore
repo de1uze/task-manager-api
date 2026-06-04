@@ -1,0 +1,37 @@
+# VCS
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Virtual envs
+.venv
+venv
+env
+
+# Local dev junk
+.DS_Store
+*.log
+.env
+.env.*
+
+# Editor / IDE
+.idea
+.vscode
+
+# Tests & docs aren't needed in the runtime image
+tests
+README.md
+
+# Docker / CI artifacts
+Dockerfile
+docker-compose*.yml
+.dockerignore
+.github
+deploy.sh

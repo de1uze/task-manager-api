@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    image: task-manager-api:dev
+    container_name: task-manager-api
+    ports:
+      - "8000:8000"
+    environment:
+      APP_NAME: "Task Manager API"
+      LOG_LEVEL: "INFO"
+      LOG_JSON: "false"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
