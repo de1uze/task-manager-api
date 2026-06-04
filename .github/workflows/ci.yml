@@ -42,6 +42,7 @@ jobs:
         with:
           context: .
           push: false
+          load: true
           tags: task-manager-api:ci
           cache-from: type=gha
           cache-to: type=gha,mode=max
